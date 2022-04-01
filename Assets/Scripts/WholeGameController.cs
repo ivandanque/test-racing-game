@@ -25,6 +25,18 @@ public class WholeGameController : MonoBehaviour
     public void NextLevel()
     {
         Debug.Log("Goes to Next Level");
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Level_1":
+                Debug.Log("Goes to Level 2");
+                break;
+            case "Level_2":
+                Debug.Log("Goes to Level 3");
+                break;
+            case "Level_3":
+                Debug.Log("Restart back to Level 1");
+                break;
+        }
     }
 
     public void MainMenu()

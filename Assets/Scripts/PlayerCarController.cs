@@ -4,27 +4,15 @@ using UnityEngine;
 
 public class PlayerCarController : MonoBehaviour
 {
-    [SerializeField] private float speed = 10.0f;
-    [SerializeField] private float turnSpeed = 200.0f;
-    private float move;
-    private float rot;
-    private bool gamePaused = false;
-
-    void Update()
+    private CarController carController;
+    void Awake()
     {
-        move = Input.GetAxisRaw("Vertical") * speed * Time.deltaTime;
-        if (move < 0f) {
-            rot = Input.GetAxisRaw("Horizontal") * turnSpeed * Time.deltaTime;
-        } else {
-            rot = Input.GetAxisRaw("Horizontal") * -turnSpeed * Time.deltaTime;
-        }
-
-        transform.Translate(move, 0f, 0f);
-        transform.Rotate(0f, 0f, rot);
+        carController = GetComponent<CarController>();
     }
 
-    public void PauseGame()
+    
+    void Update()
     {
-        gamePaused = !gamePaused;
+        carController.SetInputs(Input.GetAxisRaw("Vertical"), Input.GetAxisRaw("Horizontal"));
     }
 }
