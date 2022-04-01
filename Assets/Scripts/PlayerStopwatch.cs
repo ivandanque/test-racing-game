@@ -65,6 +65,11 @@ public class PlayerStopwatch : MonoBehaviour
         ReferenceCheckpoints(checkpointHandler.GetNextCheckpoint(0));
     }
 
+    public List<float> GetLapTimes()
+    {
+        return lapTimes;
+    }
+
     public void ReferenceCheckpoints(int checkpointsPassed)
     {
         Debug.Log("Checkpoint: " + checkpointsPassed);

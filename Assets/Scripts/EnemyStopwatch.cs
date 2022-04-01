@@ -63,7 +63,10 @@ public class EnemyStopwatch : MonoBehaviour
         }
         ReferenceCheckpoints(checkpointHandler.GetNextCheckpoint(1));
     }
-
+    public List<float> GetLapTimes()
+    {
+        return lapTimes;
+    }
     public void ReferenceCheckpoints(int checkpointsPassed)
     {
         Debug.Log("Checkpoint: " + checkpointsPassed);
