@@ -25,6 +25,6 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadLevel_3()
     {
-        // SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("Level_3");
     }
 }

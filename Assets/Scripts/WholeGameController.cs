@@ -60,9 +60,11 @@ public class WholeGameController : MonoBehaviour
                 break;
             case "Level_2":
                 Debug.Log("Goes to Level 3");
+                SceneManager.LoadScene("Level_3");
                 break;
             case "Level_3":
                 Debug.Log("Restart back to Level 1");
+                SceneManager.LoadScene("Level_1");
                 break;
         }
     }
