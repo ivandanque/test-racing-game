@@ -5,8 +5,10 @@ using UnityEngine;
 public class CheckpointHandler : MonoBehaviour
 {
     private List<SingleCheckpoint> checkpointGroup;
+
     [SerializeField]
     private List<Transform> carTransformList;
+
     [SerializeField]
     private List<int> nextCheckpointList;
 
